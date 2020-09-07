@@ -3,9 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template WebPack - Typescript - TailwindCss</title>
+    <title>State Pattern - Typescript</title>
   </head>
-  <body class="h-screen flex items-center justify-center">
-    <h1 class="text-lg text-gray-700">Template Typescript - TailwindCsss</h1>
+  <body class="">
+    <header class="w-full header header--main">
+      <div class="container">
+        <h1 class="title">State Pattern</h1>
+      </div>
+    </header>
+    <div class="container">
+      <section class="tools">
+        <button
+          id="btnRectangle"
+          class="btn btn--rectangle"
+          data-name="rectangle"
+        >
+          Rectangle Tool
+        </button>
+        <button id="btnCircle" class="btn btn--circle" data-name="circle">
+          Circle Tool
+        </button>
+        <span id="currentTool" class="currentTool label"></span>
+      </section>
+    </div>
+    <div class="container flex items-center justify-center">
+      <canvas id="mainCanvas" class="canvas" width="400" height="400" />
+    </div>
   </body>
 </html>

@@ -1,6 +1,11 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 /* --- Import here your own css files --- */
 /* --- --- */
+@import './layout/header.css';
+@import './layout/canvas.css';
+@import './layout/container.css';
+@import './components/button.css';
+@import './components/title.css';
