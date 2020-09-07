@@ -1,3 +1,17 @@
 .container {
   @apply p-4 mx-auto;
 }
+
+.container--tools {
+  @apply p-2;
+}
+
+.container--canvas {
+  @apply my-5;
+}
+
+.container--canvas::before {
+  content: 'Untitled-1 @ 400px * 400px';
+  top: -5px;
+  @apply relative p-2 text-xs text-gray-700 border-t-2 border-l-2 border-r-2 border-solid rounded;
+}

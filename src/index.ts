@@ -3,15 +3,6 @@ import Canvas from './state/canvas';
 import CircleTool from './state/circleTool';
 import RectangleTool from './state/rectangleTool';
 
-const mainCanvas = document.querySelector('#mainCanvas') as HTMLCanvasElement,
-  mainCanvasLeft = mainCanvas.offsetLeft,
-  mainCanvasTop = mainCanvas.offsetTop,
-  context = mainCanvas.getContext('2d'),
-  btnRectangle = document.querySelector('#btnRectangle') as HTMLButtonElement,
-  btnCircle = document.querySelector('#btnCircle') as HTMLButtonElement,
-  labelCurrentTool = document.querySelector('#currentTool') as HTMLLabelElement;
-
-const canvas = new Canvas(context);
 const tools = {
   rectangle: {
     instance: new RectangleTool(),
@@ -22,6 +13,19 @@ const tools = {
     color: '#336bff',
   },
 };
+
+const mainCanvas = document.querySelector('#mainCanvas') as HTMLCanvasElement,
+  mainCanvasLeft = mainCanvas.offsetLeft,
+  mainCanvasTop = mainCanvas.offsetTop,
+  context = mainCanvas.getContext('2d'),
+  btnRectangle = document.querySelector('#btnRectangle') as HTMLButtonElement,
+  btnCircle = document.querySelector('#btnCircle') as HTMLButtonElement,
+  labelCurrentTool = document.querySelector('#currentTool') as HTMLLabelElement;
+
+const canvas = new Canvas(context);
+canvas.currentTool = new RectangleTool();
+canvas.currentTool.color = '#e7620b';
+labelCurrentTool.textContent = 'rectangle';
 
 function selectTool() {
   const dataName = this.getAttribute('data-name');

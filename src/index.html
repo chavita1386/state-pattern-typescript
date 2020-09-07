@@ -11,7 +11,7 @@
         <h1 class="title">State Pattern</h1>
       </div>
     </header>
-    <div class="container">
+    <div class="container container--tools">
       <section class="tools">
         <button
           id="btnRectangle"
@@ -23,10 +23,13 @@
         <button id="btnCircle" class="btn btn--circle" data-name="circle">
           Circle Tool
         </button>
-        <span id="currentTool" class="currentTool label"></span>
+        <p class="inline-block">
+          <span class="text-sm">Current Tool:</span>
+          <span id="currentTool" class="currentTool label"></span>
+        </p>
       </section>
     </div>
-    <div class="container flex items-center justify-center">
+    <div class="container m-2 container--canvas">
       <canvas id="mainCanvas" class="canvas" width="400" height="400" />
     </div>
   </body>
